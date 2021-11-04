@@ -131,3 +131,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
+abbr {
+  text-decoration: none;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: underline;
+}

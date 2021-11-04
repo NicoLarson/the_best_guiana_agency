@@ -36,7 +36,7 @@ header {
 header h1 {
   text-align: center;
   font-family: 'Zen Antique', serif;
-  font-size: 4.4rem;
+  font-size: 2rem;
   font-weight: bolder;
   color: #FAFAFA;
   text-transform: uppercase;
@@ -46,39 +46,15 @@ header p {
   color: #FAFAFA;
   text-align: center;
   padding: 2rem;
+}
 
+header nav {
+  display: none;
 }
 
 main section {
   height: 100vh;
   padding: 8rem 0;
-}
-
-header nav {
-  top: 25vh;
-  font-weight: bolder;
-  color: #FAFAFA;
-}
-
-header nav ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 8rem 0;
-}
-
-header nav ul li {
-  padding: 2rem;
-  text-align: center;
-
-}
-
-header nav ul li a {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  color: #FAFAFA;
-  font-size: 3.2rem;
-  font-weight: 300;
-  text-decoration: 0;
 }
 
 main section:nth-child(1) {
@@ -106,4 +82,41 @@ main section:nth-child(1) p {
   text-align: center;
   padding: 35vh 0 0;
   font-size: 4rem;
+}
+
+@media screen and (min-width: 770px) {
+
+  header h1 {
+    font-size: 4rem;
+    padding: 4rem 4rem 0;
+  }
+
+  header nav {
+    display: block;
+    top: 25vh;
+    font-weight: bolder;
+    color: #FAFAFA;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem 0;
+  }
+
+  header nav ul li {
+    padding: 2rem;
+    text-align: center;
+
+  }
+
+  header nav ul li a {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #FAFAFA;
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-decoration: 0;
+  }
+
 }
