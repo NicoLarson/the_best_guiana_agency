@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelectorAll("body")
 
     menuBtn.addEventListener("click", () => {
-        nav.classList.add("discover");
-        menuBtn.classList.add("discover");
+        nav.classList.toggle("discover");
+        menuBtn.classList.toggle("discover");
     });
     for (let i = 0; i < menuList.length; i++) {
         menuList[i].addEventListener("click", () => {
