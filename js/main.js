@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < menuListItemLink.length; i++) {
                 menuListItemLink[i].style.color = "#222";
             }
-        } else {
+        } else if(getWidth() > 768){
             for (let i = 0; i < menuListItemLink.length; i++) {
-                menuListItemLink[i].style.color = "#FAFAFA";
+                menuListItemLink[ii].style.color = "#FAFAFA";
             }
         }
 
@@ -51,19 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onscroll = function () {
         scrollEffect();
     };
-
-    const icon = document.querySelector('.icon');
-    const arrow = document.querySelector('.arrow');
-
-    icon.onclick = () => {
-        arrow.animate([
-            { left: '0' },
-            { left: '10px' },
-            { left: '0' }
-        ], {
-            duration: 700,
-            iterations: Infinity
-        });
-    }
 
 })

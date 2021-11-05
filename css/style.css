@@ -117,12 +117,15 @@ header nav {
   transition: .8s;
 }
 
-header nav ul li a {
+header nav.discover ul li a {
   color: #222;
 }
 
 /* SECTIONS */
 main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   height: calc(100vh - 1.618rem * 2);
   padding: 1.618rem;
   background-color: #fafafa;
@@ -131,11 +134,11 @@ main section {
 main section h2 {
   font-size: 2.427rem;
   font-weight: bolder;
+  padding: 1.618rem 0;
 }
 
 main section p {
   font-size: 1.618rem;
-  padding: 1.941rem 0;
 }
 
 main section ul li h3 {
@@ -144,24 +147,26 @@ main section ul li h3 {
 }
 
 /* VOS BESOINS */
-
-main section:nth-child(1) {
+main section:nth-child(1) ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+}
+
+main section:nth-child(1) ul li i {
+  display: inline;
+  padding: 0 0.809rem;
 }
 
 main section:nth-child(1) ul li p {
+  display: inline-block;
+  max-width: 100%;
   line-height: 1.618rem;
   font-size: 1.618rem;
 }
 
-main section:nth-child(1) ul li i {
-  display: none;
-}
-
+main section:nth-child(1) ul li:nth-child(2n) i,
 main section:nth-child(1) ul li:nth-child(2n) p {
-  text-align: right;
+  float: right;
 }
 
 main section:nth-child(1)>p {
@@ -189,13 +194,6 @@ main section:nth-child(3) ul li p {
 
 /* NOUS AVONS DÉJÀ FAIT DES HEUREUX */
 
-main section:nth-child(4) {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
 main section:nth-child(4) ul {
   display: flex;
   justify-content: space-around;
@@ -221,6 +219,9 @@ main section:nth-child(4) ul li:last-child {
 main section:nth-child(4) ul li img {
   width: 4.852rem;
   height: 4.852rem;
+}
+main section:nth-child(4) p i{
+  display: none;
 }
 
 /* GO UP BUTTON */
