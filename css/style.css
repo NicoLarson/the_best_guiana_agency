@@ -27,7 +27,7 @@ header {
 }
 
 header h1 {
-  padding: 1rem;
+  padding: 0 1rem;
   text-align: center;
   font-family: 'Zen Antique', serif;
   font-size: 1.618rem;
@@ -39,26 +39,42 @@ header h1 {
 header p {
   color: #FAFAFA;
   text-align: center;
-  padding: 1.618rem;
+  padding: 2.103rem;
   font-size: .8rem;
 }
 
-header p.menu.btn {
+/* NAV */
+/* MENU BTN */
+
+header button.menu.btn {
   position: fixed;
   top: 0;
   right: 0;
+  margin: .809rem;
+  padding: .809rem;
   font-size: 1.2rem;
   z-index: 2;
-  color: red;
+  color: #FAFAFA;
+  background: 0;
+  border: 0;
+  border-radius: 9.7%;
   cursor: pointer;
+  transition: .8s;
 }
 
-header p.menu.btn.discover {
+header button.menu.btn.discover,
+header button.menu.btn.black {
   color: #222;
 }
 
+
 /* NAV */
+
+header nav,
 header nav.discover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   right: 0;
@@ -68,6 +84,7 @@ header nav.discover {
   z-index: 1;
 }
 
+header nav ul,
 header nav.discover ul {
   display: flex;
   flex-direction: column;
@@ -76,15 +93,22 @@ header nav.discover ul {
   height: 100%;
 }
 
+header nav ul li,
 header nav.discover ul li {
   font-size: 1.618rem;
   padding: .8rem;
 }
 
-header nav.discover ul li:last-child {
-  position: absolute;
-  bottom: 0;
+header nav p {
   font-size: .8rem;
+  color: #222;
+  z-index: 1;
+
+}
+
+header nav {
+  right: 200vw;
+  transition: .8s;
 }
 
 header nav ul li a {
@@ -172,10 +196,12 @@ main section:nth-child(4) ul li {
   width: 4.852rem;
   height: 4.852rem;
   margin: .8rem;
-  border: #f1c40f solid .1rem;
   border-radius: .2px;
 }
 
+main section:nth-child(4) ul li:nth-child(1) {
+  filter: invert();
+ }
 main section:nth-child(4) ul li:last-child {
   border: #222 dashed .2rem;
 }
