@@ -16,27 +16,21 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* div.square {
-  position: fixed;
-  height: calc(100vh - 4rem);
-  width: calc(100vw - 4rem);
-  border: 2rem solid var(--color-square);
-  z-index: 1;
-} */
-
+/* HEADER */
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  height: calc(100vh - 5rem);
-  border: 2rem solid var(--color-square);
+  height: calc(100vh - 1.6rem);
+  border: .8rem solid var(--color-square);
 }
 
 header h1 {
+  padding: 1rem;
   text-align: center;
   font-family: 'Zen Antique', serif;
-  font-size: 2rem;
+  font-size: 1.618rem;
   font-weight: bolder;
   color: #FAFAFA;
   text-transform: uppercase;
@@ -45,47 +39,203 @@ header h1 {
 header p {
   color: #FAFAFA;
   text-align: center;
-  padding: 2rem;
+  padding: 1.618rem;
+  font-size: .8rem;
 }
 
-header nav {
-  display: none;
+header p.menu.btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  z-index: 2;
+  color: red;
+  cursor: pointer;
 }
 
-main section {
+header p.menu.btn.discover {
+  color: #222;
+}
+
+/* NAV */
+header nav.discover {
+  position: fixed;
+  top: 0;
+  right: 0;
   height: 100vh;
-  padding: 8rem 0;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 1;
 }
 
-main section:nth-child(1) {
+header nav.discover ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+header nav.discover ul li {
+  font-size: 1.618rem;
+  padding: .8rem;
+}
+
+header nav.discover ul li:last-child {
+  position: absolute;
+  bottom: 0;
+  font-size: .8rem;
+}
+
+header nav ul li a {
+  color: #222;
+}
+
+/* SECTIONS */
+main section {
+  height: calc(100vh - 1.618rem * 2);
+  padding: 1.618rem;
   background-color: #fafafa;
 }
 
-main section:nth-child(1) h2 {
-  background-color: #fafafa;
-  padding: 0 0 0 8rem;
-  font-size: 4rem;
+main section h2 {
+  font-size: 2.427rem;
   font-weight: bolder;
 }
 
-main section:nth-child(1) ul {
+main section p {
+  font-size: 1.618rem;
+  padding: 1.941rem 0;
+}
+
+main section ul li h3 {
+  width: 100%;
+  font-size: 1.618rem;
+}
+
+/* VOS BESOINS */
+main section:nth-child(1) {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  padding: 4rem 0 0;
-  width: 100vw;
-  background-color: #fafafa;
-  font-size: 4rem;
+}
+
+main section:nth-child(1) ul li {
+  line-height: 1.618rem;
+  font-size: 1.618rem;
+}
+
+main section:nth-child(1) ul li:nth-child(2n) {
+  text-align: right;
 }
 
 main section:nth-child(1) p {
+  padding: 1.618rem 0;
+  font-size: 1.618rem;
   text-align: center;
-  padding: 35vh 0 0;
-  font-size: 4rem;
+  line-height: 1.941rem;
+}
+
+/* NOS COMPÉTENCES */
+main section:nth-child(2)>ul>li:nth-child(2n) {
+  text-align: right;
+  padding: 1.618rem 0;
+}
+
+/* NOTRE ÉQUIPE */
+main section:nth-child(3)>ul>li:nth-child(2n) {
+  text-align: right;
+}
+
+main section:nth-child(3) ul li p {
+  padding: .8rem 0 1.941rem;
+  font-size: .8rem;
+}
+
+/* NOUS AVONS DÉJÀ FAIT DES HEUREUX */
+
+main section:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section:nth-child(4) ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main section:nth-child(4) ul li {
+  width: 4.852rem;
+  height: 4.852rem;
+  margin: .8rem;
+  border: #f1c40f solid .1rem;
+  border-radius: .2px;
+}
+
+main section:nth-child(4) ul li:last-child {
+  border: #222 dashed .2rem;
+}
+
+main section:nth-child(4) ul li img {
+  width: 4.852rem;
+  height: 4.852rem;
+}
+
+/* FOOTER */
+footer {
+  min-height: calc(100vh - 1.618rem * 2);
+  padding: 1.618rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-ft-footer);
+}
+
+footer section {
+  padding: 1.618rem 0;
+}
+
+footer section h2 {
+  font-size: 1.618rem;
+  padding: .8rem 0;
+}
+
+footer section form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer section form label {
+  padding: 1.618rem 0 .8rem;
+}
+
+footer section form input {
+  padding: 0 .4rem .4rem;
+  background: 0;
+  border: 0;
+  border-bottom: #FAFAFA .1rem solid;
+  color: #FAFAFA;
+}
+
+footer section form input[type="submit"] {
+  margin: 1rem 0;
+  padding: .8rem;
+  width: 6rem;
+  text-align: center;
+  background-color: greenyellow;
+  color: #222;
+}
+
+footer p {
+  text-align: center;
 }
 
 @media screen and (min-width: 770px) {
-
+  /* 
   header h1 {
     font-size: 4rem;
     padding: 4rem 4rem 0;
@@ -117,6 +267,6 @@ main section:nth-child(1) p {
     font-size: 2.4rem;
     font-weight: 300;
     text-decoration: 0;
-  }
+  } */
 
 }
