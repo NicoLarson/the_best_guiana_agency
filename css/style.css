@@ -243,6 +243,7 @@ main a.go-up {
   border: solid #222 1px;
   cursor: pointer;
   transition: 6.472s;
+  z-index: 2;
 }
 
 main a i {
