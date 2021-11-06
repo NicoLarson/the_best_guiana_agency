@@ -1,7 +1,7 @@
 :root {
   --color-square: #FAFAFA;
   --color-separation-line: #FAFAFA;
-  --color-bg-body: #222;
+  --color-bg-body: #000;
   --color-bg-header: #FAFAFA;
   --color-ft-header: #FAFAFA;
   --color-bg-main: #FAFAFA;
@@ -205,6 +205,7 @@ main section:nth-child(4) ul li {
   width: 4.852rem;
   height: 4.852rem;
   margin: .8rem;
+  border: #222 solid .162rem;
   border-radius: .2px;
 }
 
@@ -213,14 +214,15 @@ main section:nth-child(4) ul li:nth-child(1) {
 }
 
 main section:nth-child(4) ul li:last-child {
-  border: #222 dashed .2rem;
+  border: #222 dashed .162rem;
 }
 
 main section:nth-child(4) ul li img {
   width: 4.852rem;
   height: 4.852rem;
 }
-main section:nth-child(4) p i{
+
+main section:nth-child(4) p i {
   display: none;
 }
 
@@ -288,9 +290,16 @@ footer section form textarea {
   padding: .809rem;
 }
 
+/* COORDONNEE */
+footer div section address {
+  line-height: 1.618rem;
+}
 
+/* COPYRIGHT */
 footer p {
+  padding-top: 3.236rem;
   text-align: center;
+  font-size: .809rem;
 }
 
 /* BTN */
@@ -305,7 +314,7 @@ footer section form input[type="submit"] {
   border-radius: 2.265px;
   text-align: center;
   font-size: .970rem;
-
+  transition: .4s;
 }
 
 footer section form input[type="submit"]:hover,
@@ -321,9 +330,10 @@ footer section form input[type="submit"]:active {
 
 @media screen and (min-width: 768px) {
   header h1 {
-    font-size: 3.236rem;
+    font-size: 4.045rem;
   }
 
+  /* MENU */
   header button.menu.btn {
     right: 2.427rem;
     top: 1.618rem;
@@ -378,71 +388,60 @@ footer section form input[type="submit"]:active {
   }
 
   main section h2 {
-    font-size: 6.472rem;
-    margin: 0 6.472rem;
+    font-size: 3.236rem;
+    margin: 0 1.618rem;
   }
 
   main section ul li h3 {
-    font-size: 3.236rem;
+    font-size: 2.427rem;
     padding: 1.618rem 0;
+    text-align: center;
   }
 
-  main section>p {
+  main section li,
+  main section a,
+  main section p {
     text-align: center;
-    font-size: 2.427rem;
+    font-size: 1.618rem;
   }
 
   main section>ul {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+
   }
 
   /* VOS BESOINS */
+  main section:nth-child(1) ul {
+    flex-direction: row;
+  }
+
   main section:nth-child(1) ul li {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-  }
-
-  main section:nth-child(1) ul li p {
-    font-size: 2.427rem;
   }
 
   main section:nth-child(1) ul li i {
     display: initial;
     font-size: 2.427rem;
+    margin-top: .809rem;
   }
 
-  main section:nth-child(1)>p {
-    font-size: 2.427rem;
-  }
 
   /* NOTRE SAVOIR FAIRE */
 
 
-  main section:nth-child(2)>ul>li {
-    font-size: 1.618rem;
-    line-height: 2.427rem;
-  }
-
-  main section:nth-child(2)>ul>li:nth-child(2n) {
-    text-align: justify;
-    padding: 0;
-  }
-
   /* NOTRE ÉQUIPE */
-  main section:nth-child(3)>ul>li:nth-child(2n) {
-    text-align: initial;
-  }
 
   main section:nth-child(3) ul li h3 {
-    text-align: center;
+    padding: .809rem;
   }
 
   main section:nth-child(3) ul li p {
-    padding: .8rem 0 1.941rem;
-    font-size: 1.618rem;
+    padding: 0;
+    font-size: 1.294rem;
   }
 
   /* NOUS AVONS DÉJÀ FAIT DES HEUREUX */
@@ -464,6 +463,7 @@ footer section form input[type="submit"]:active {
   main section:nth-child(4) p {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   main section:nth-child(4) p i {
@@ -473,6 +473,7 @@ footer section form input[type="submit"]:active {
 
 
   main section:nth-child(4) p i {
+    display: inline-block;
     animation: upAndDown 2s linear infinite alternate;
   }
 
@@ -508,21 +509,32 @@ footer section form input[type="submit"]:active {
   }
 
   /* FOOTER */
-  footer {
-    flex-wrap: wrap;
-  }
 
+  /* FORMULAIRE */
   footer div {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
   }
 
   footer div section form {
-    width: 12rem;
+    width: 23rem;
   }
 
   footer section {
-    margin: 8.09rem;
+    margin: 1.618rem;
+  }
+
+  footer section form input:focus {
+    outline: none;
+    border-bottom: #4cd137 0.129rem solid;
+  }
+
+  footer section form textarea:focus {
+    outline: none;
+    border: #4cd137 0.129rem solid;
+
   }
 
 }

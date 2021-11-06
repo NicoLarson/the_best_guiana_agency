@@ -32,9 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < menuListItemLink.length; i++) {
                 menuListItemLink[i].style.color = "#222";
             }
-        } else if(getWidth() > 768){
-            for (let i = 0; i < menuListItemLink.length; i++) {
-                menuListItemLink[ii].style.color = "#FAFAFA";
+        } else {
+            if (getWidth() > 768) {
+                for (let i = 0; i < menuListItemLink.length; i++) {
+                    menuListItemLink[i].style.color = "#FAFAFA";
+                }
+            }else{
+                for (let i = 0; i < menuListItemLink.length; i++) {
+                    menuListItemLink[i].style.color = "#222";
+                }
             }
         }
 
