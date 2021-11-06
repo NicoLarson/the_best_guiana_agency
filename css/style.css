@@ -59,7 +59,7 @@ header button.menu.btn {
   margin: .809rem;
   padding: .809rem;
   font-size: 1.294rem;
-  z-index: 2;
+  z-index: 3;
   color: #FAFAFA;
   background: 0;
   border: 0;
@@ -87,7 +87,7 @@ header nav.discover {
   height: 100vh;
   width: 100vw;
   background-color: #fff;
-  z-index: 1;
+  z-index: 3;
 }
 
 header nav ul,
@@ -123,6 +123,7 @@ header nav.discover ul li a {
 
 /* SECTIONS */
 main section {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -132,9 +133,13 @@ main section {
 }
 
 main section h2 {
+  position: sticky;
+  top: -1px;
   font-size: 2.427rem;
   font-weight: bolder;
   padding: 1.618rem 0;
+  background-color: #fafafaee;
+  z-index: 2;
 }
 
 main section p {
