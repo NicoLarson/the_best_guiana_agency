@@ -153,9 +153,10 @@ main section h2 {
   top: -1px;
   font-family: 'Zen Antique', serif;
   text-align: center;
-  font-size: 2.427rem;
-  font-weight: bolder;
+  font-size: 2.023rem;
+  font-weight: 300;
   line-height: 3.236rem;
+  text-transform: uppercase;
   padding: 1.618rem;
   background-color: #f0f0f0;
   z-index: 2;
@@ -186,8 +187,10 @@ main section:nth-child(1) ul li {
   align-items: center;
   margin: .404rem;
   background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   width: 8.09rem;
   height: 8.09rem;
+  border-radius: .161rem;
 }
 
 main section:nth-child(1) ul li i {
@@ -224,16 +227,20 @@ main section:nth-child(2)>ul>li {
   flex-direction: column;
   align-items: center;
   background-color: #fafafa;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   width: 16rem;
   padding: 0.809rem;
   margin: 0.809rem;
+  border-radius: .161rem;
 }
+
 main section:nth-child(2)>ul>li h3 {
   font-family: 'Zen Antique', serif;
   text-align: center;
   padding: 1.618rem 0;
   text-transform: uppercase;
 }
+
 main section:nth-child(2)>ul>li img {
   width: 6.472rem;
   padding: .809rem 0;
@@ -241,31 +248,35 @@ main section:nth-child(2)>ul>li img {
 
 main section:nth-child(2)>ul>li ul {
   padding: .809rem 0;
-text-align: center;
-font-size: .809rem;
-line-height: 1.214rem;
+  text-align: center;
+  font-size: .809rem;
+  line-height: 1.214rem;
 }
 
 /* NOTRE ÉQUIPE */
-main section:nth-child(3) > p{
+main section:nth-child(3)>p {
   text-align: center;
   padding: .809rem;
 }
-main section:nth-child(3) ul{
+
+main section:nth-child(3) ul {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   text-align: center;
 }
-main section:nth-child(3) ul li{
+
+main section:nth-child(3) ul li {
   display: flex;
   flex-direction: column;
 }
-main section:nth-child(3) ul li img{
+
+main section:nth-child(3) ul li img {
   width: 12rem;
   padding: 1.618rem;
 }
+
 main section:nth-child(3) ul li p {
   padding: .8rem 0 1.941rem;
   font-size: .8rem;
@@ -298,10 +309,12 @@ main section:nth-child(4) ul li img {
   width: 4.852rem;
   height: 4.852rem;
 }
+
 main section:nth-child(4) p {
-padding: .809rem;
-text-align: center;
+  padding: .809rem;
+  text-align: center;
 }
+
 main section:nth-child(4) p i {
   display: none;
 }
@@ -356,6 +369,7 @@ footer section form {
 
 footer section form label {
   padding: 1.618rem 0 .8rem;
+  font-size: .809rem;
 }
 
 footer section form input {
@@ -374,10 +388,13 @@ footer section form textarea {
 /* COORDONNEE */
 footer div section address {
   line-height: 1.618rem;
+  font-size: .809rem;
+
 }
 
 /* COPYRIGHT */
 footer p {
+  line-height: 1.618rem;
   padding-top: 3.236rem;
   text-align: center;
   font-size: .809rem;
@@ -465,12 +482,13 @@ footer section form input[type="submit"]:active {
   main section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   main section h2 {
-    font-size: 3.236rem;
-    margin: 0 1.618rem;
+    position: inherit;
+    font-size: 2.427rem;
+    margin: 3.236rem;
   }
 
   main section ul li h3 {
@@ -495,13 +513,12 @@ footer section form input[type="submit"]:active {
 
   /* VOS BESOINS */
   main section:nth-child(1) ul {
-    flex-direction: row;
+    max-width: calc(8rem * 6);
+    margin: 0 auto;
   }
 
   main section:nth-child(1) ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 2.427rem;
   }
 
   main section:nth-child(1) ul li i {
@@ -512,12 +529,34 @@ footer section form input[type="submit"]:active {
 
 
   /* NOTRE SAVOIR FAIRE */
+  main section:nth-child(2) h3 {
+    font-size: 1.618rem;
+    line-height: 2.023rem;
+  }
 
+  main section:nth-child(2)>ul>li {
+    justify-content: space-between;
+    height: 26rem;
+  }
+
+  main section:nth-child(2)>ul>li ul li {
+    font-size: 1.214rem;
+    line-height: 1.618rem;
+  }
 
   /* NOTRE ÉQUIPE */
 
   main section:nth-child(3) ul li h3 {
     padding: .809rem;
+  }
+  main section:nth-child(3) ul {
+    justify-content: center;
+  }
+  main section:nth-child(3) ul li {
+    display: initial;
+    padding: .809rem;
+    font-size: 1.294rem;
+    width: 20.23rem;
   }
 
   main section:nth-child(3) ul li p {
