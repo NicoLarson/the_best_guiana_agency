@@ -32,14 +32,29 @@ header div.welcome-message {
   z-index: -1;
 }
 
-header h1 {
+header h1,
+header h2 {
   padding: 0 1rem;
   text-align: center;
+  color: #FAFAFA;
+  text-transform: uppercase;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  font-family: 'Comforter Brush', cursive;
+  font-size: 1.8rem;
+}
+
+header h1 img {
+  width: 6rem;
+}
+
+header h2 {
   font-family: 'Zen Antique', serif;
   font-size: 1.618rem;
   font-weight: bolder;
-  color: #FAFAFA;
-  text-transform: uppercase;
 }
 
 header p {
@@ -56,14 +71,14 @@ header button.menu.btn {
   position: fixed;
   top: 0;
   right: 0;
-  margin: .809rem;
-  padding: .809rem;
+  margin: 1.618rem;
+  padding: .405rem .809rem;
   font-size: 1.294rem;
   z-index: 3;
   color: #FAFAFA;
   background: 0;
-  border: 0;
-  border-radius: 9.7%;
+  border: .161rem solid #FAFAFA;
+  border-radius: 1.6rem;
   cursor: pointer;
   transition: .8s;
 }
@@ -71,6 +86,8 @@ header button.menu.btn {
 header button.menu.btn.discover,
 header button.menu.btn.black {
   color: #222;
+  border: .1rem solid #222;
+
 }
 
 
@@ -123,22 +140,24 @@ header nav.discover ul li a {
 
 /* SECTIONS */
 main section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: calc(100vh - 1.618rem * 2);
-  padding: 1.618rem;
-  background-color: #fafafa;
+  padding: 1.618rem 0;
+  background-color: #f0f0f0;
 }
 
 main section h2 {
   position: sticky;
   top: -1px;
+  font-family: 'Zen Antique', serif;
+  text-align: center;
   font-size: 2.427rem;
   font-weight: bolder;
-  padding: 1.618rem 0;
-  background-color: #fafafaee;
+  line-height: 3.236rem;
+  padding: 1.618rem;
+  background-color: #f0f0f0;
   z-index: 2;
 }
 
@@ -154,12 +173,27 @@ main section ul li h3 {
 /* VOS BESOINS */
 main section:nth-child(1) ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+main section:nth-child(1) ul li {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: .404rem;
+  background-color: #fff;
+  width: 8.09rem;
+  height: 8.09rem;
 }
 
 main section:nth-child(1) ul li i {
   display: inline;
-  padding: 0 0.809rem;
+  font-size: 1.618rem;
+  padding: 0.809rem;
 }
 
 main section:nth-child(1) ul li p {
@@ -167,11 +201,6 @@ main section:nth-child(1) ul li p {
   max-width: 100%;
   line-height: 1.618rem;
   font-size: 1.618rem;
-}
-
-main section:nth-child(1) ul li:nth-child(2n) i,
-main section:nth-child(1) ul li:nth-child(2n) p {
-  float: right;
 }
 
 main section:nth-child(1)>p {
@@ -182,16 +211,61 @@ main section:nth-child(1)>p {
 }
 
 /* NOTRE SAVOIR FAIRE */
-main section:nth-child(2)>ul>li:nth-child(2n) {
-  text-align: right;
+main section:nth-child(2)>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+main section:nth-child(2)>ul>li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  width: 16rem;
+  padding: 0.809rem;
+  margin: 0.809rem;
+}
+main section:nth-child(2)>ul>li h3 {
+  font-family: 'Zen Antique', serif;
+  text-align: center;
   padding: 1.618rem 0;
+  text-transform: uppercase;
+}
+main section:nth-child(2)>ul>li img {
+  width: 6.472rem;
+  padding: .809rem 0;
+}
+
+main section:nth-child(2)>ul>li ul {
+  padding: .809rem 0;
+text-align: center;
+font-size: .809rem;
+line-height: 1.214rem;
 }
 
 /* NOTRE ÉQUIPE */
-main section:nth-child(3)>ul>li:nth-child(2n) {
-  text-align: right;
+main section:nth-child(3) > p{
+  text-align: center;
+  padding: .809rem;
 }
-
+main section:nth-child(3) ul{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+main section:nth-child(3) ul li{
+  display: flex;
+  flex-direction: column;
+}
+main section:nth-child(3) ul li img{
+  width: 12rem;
+  padding: 1.618rem;
+}
 main section:nth-child(3) ul li p {
   padding: .8rem 0 1.941rem;
   font-size: .8rem;
@@ -210,8 +284,6 @@ main section:nth-child(4) ul li {
   width: 4.852rem;
   height: 4.852rem;
   margin: .8rem;
-  border: #222 solid .162rem;
-  border-radius: .2px;
 }
 
 main section:nth-child(4) ul li:nth-child(1) {
@@ -226,7 +298,10 @@ main section:nth-child(4) ul li img {
   width: 4.852rem;
   height: 4.852rem;
 }
-
+main section:nth-child(4) p {
+padding: .809rem;
+text-align: center;
+}
 main section:nth-child(4) p i {
   display: none;
 }
